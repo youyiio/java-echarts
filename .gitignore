@@ -1,0 +1,20 @@
+# all project
+.idea
+.vscode
+composer.lock
+*.log
+.svn
+
+# java 
+target/*
+.class
+
+# nodejs
+package.json
+package-lock.json
+node_modules
+
+# my project
+src/test/java/com/beyongx/echarts/log
+src/test/java/com/beyongx/echarts/html
+src/main/java/com/beyongx/echarts/AutoGenerate.php
