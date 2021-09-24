@@ -8,6 +8,9 @@ composer.lock
 # java 
 target/*
 .class
+.classpath
+.factorypath
+.project
 
 # nodejs
 package.json

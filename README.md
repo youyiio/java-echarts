@@ -11,7 +11,7 @@ Apache EChart5.0已经最新发布，在视觉效果、动画效果和大数据�
 
 * 简洁的 API 设计，与echarts.js前端高度一致，支持链式调用；
 * 囊括了 30+ 种常见图表及3D图标，提供图片\pdf格式快速导出；
-* 可轻松集成至 Thinkphp，Lavarel 等主流 Web 框架;
+* 可轻松集成至 Spring MVC，SpringBoot 等主流 Web 框架;
 * 高度灵活的配置项，可轻松搭配出精美的图表;
 * 详细的文档和示例，帮助开发者更快的上手项目;
 * ECharts5.0+完美支持，可以流畅的运行在 PC 和移动设备上，兼容当前绝大部分浏览器；
@@ -29,7 +29,7 @@ Apache EChart5.0已经最新发布，在视觉效果、动画效果和大数据�
 
 ## 第一个EChart5.0 demo
 
-**ThinkPHP5/6 示例**
+**第一个EChart5.0 示例**
 ```
 use beyong\echarts\ECharts;
 use beyong\echarts\options\YAxis;
@@ -119,7 +119,7 @@ echo $content;
 
 
 ## Issues
-如果有遇到问题请提交 [issues](https://github.com/youyiio/php-echarts/issues)
+如果有遇到问题请提交 [issues](https://github.com/youyiio/java-echarts/issues)
 
 
 ## License
