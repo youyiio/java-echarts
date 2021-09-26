@@ -7,7 +7,7 @@ composer.lock
 
 # java 
 target/*
-.setting
+.settings
 .class
 .classpath
 .factorypath
@@ -22,3 +22,5 @@ node_modules
 src/test/java/com/beyongx/echarts/log
 src/test/java/com/beyongx/echarts/html
 src/main/java/com/beyongx/echarts/AutoGenerate.php
+examples/log
+examples/html

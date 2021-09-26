@@ -47,7 +47,15 @@ public class ECharts {
         this.setEChartsJsVar("");
     }
 
-    //渲染输出
+    //渲染输出1
+    public String render()
+    {
+        Map<String, String> attribute = new HashMap<>();
+        String theme = null;
+        return this.engine.render(this.id, this.optionObj, theme, attribute, this._events);
+    }
+
+    //渲染输出2
     public String render(Map<String, String> attribute, String theme)
     {
         return this.engine.render(this.id, this.optionObj, theme, attribute, this._events);

@@ -2,14 +2,10 @@ package com.beyongx.echarts.render;
 
 import java.util.Map;
 import java.util.UUID;
-import java.util.logging.MemoryHandler;
 import java.util.HashMap;
-import java.util.List;
 import com.beyongx.echarts.Option;
 import com.google.gson.Gson;
-import com.beyongx.echarts.Chart;
 
-import org.apache.commons.text.StringEscapeUtils;
 import org.apache.commons.lang3.StringUtils;
 
 public class HtmlEngine extends Engine {
@@ -54,17 +50,17 @@ public class HtmlEngine extends Engine {
         
 
         String echartsJsVar = this.echartsJsVar;
+        String optionJson = this.jsonEncode(option);
 
         StringBuffer response = new StringBuffer();
         if (StringUtils.compare(Engine.version, "3.0.0") < 0) {
-            String dist = Engine.dist;
+            //String dist = Engine.dist;
             String require = this._require(option);
-            String optionJson = this.jsonEncode(option);
             
             
 //**************多行文本输出 start            
 response.append("")
-.append("<div id=\"$id\" $attribute></div>")
+.append("<div id=\"{$id}\" {$attribute}></div>")
 .append("$responseJs")
 .append("<script type=\"text/javascript\">")
 .append("    require.config({")
@@ -74,11 +70,11 @@ response.append("")
 .append("    });")
 .append("    require(")
 .append("        [")
-.append("            $require")
+.append("            ").append(require)
 .append("        ],")
 .append("        function (ec) {")
-.append("            var myChart = ec.init(document.getElementById(\"$id\"), \"$theme\");")
-.append("            var option = $option;")
+.append("            var myChart = ec.init(document.getElementById(\"{$id}\"), \"{$theme}\");")
+.append("            var option = {$option};")
 .append("            myChart.setOption(option);")
 .append("        }")
 .append("    );")
@@ -96,23 +92,27 @@ response.append("")
                 }
             }
 
-            String optionJson = this.jsonEncode(option);
-
             
 //**************多行文本输出 start            
 response.append("")
-.append("<div id=\"$id\" $attribute></div>")
-.append("$responseJs")
+.append("<div id=\"{$id}\" {$attribute}></div>")
+.append("{$responseJs}")
 .append("<script type=\"text/javascript\">")
-.append("    var $echartsJsVar = echarts.init(document.getElementById(\"$id\"), \"$theme\");")
-.append("    $echartsJsVar.setOption($option);$eventsHtml")
+.append("    var {$echartsJsVar} = echarts.init(document.getElementById(\"{$id}\"), \"{$theme}\");")
+.append("    {$echartsJsVar}.setOption({$option});")
+.append("    ").append(eventsHtml)
 .append("</script>");
 
 //**************多行文本输出 end
 
         }
 
-        return response.toString();
+        String renderHtml = response.toString();
+        renderHtml = renderHtml.replace("{$id}", id).replace("{$attribute}", attributeStr).replace("{$theme}", theme);
+        renderHtml = renderHtml.replace("{$echartsJsVar}", echartsJsVar).replace("{$responseJs}", responseJs);
+        renderHtml = renderHtml.replace("{$dist}", Engine.dist).replace("{$option}", optionJson);
+
+        return renderHtml;
     }
 
     public String jsExpr(String string)

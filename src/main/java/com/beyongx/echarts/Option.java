@@ -53,6 +53,8 @@ public class Option {
 
     public Option()
     {
+        series = new ArrayList<Chart>();
+        color = new ArrayList<String>();
     }
 
     public Option title(Title title)
