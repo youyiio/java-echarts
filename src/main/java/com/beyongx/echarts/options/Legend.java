@@ -84,7 +84,7 @@ public class Legend implements Serializable {
     
     private String icon; //
     
-    private Map<String, Object> data; //
+    private Object[] data; //
     
     private String backgroundColor; // Default: 'transparent'
     

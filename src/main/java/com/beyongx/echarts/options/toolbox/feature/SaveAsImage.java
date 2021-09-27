@@ -31,7 +31,7 @@ public class SaveAsImage implements Serializable {
     
     private String connectedBackgroundColor; // Default: '#fff'
     
-    private Map<String, Object> excludeComponents; // Default: '[\'toolbox\']'
+    private Object[] excludeComponents; // Default: '[\'toolbox\']'
     
     private String show; // Default: true
     

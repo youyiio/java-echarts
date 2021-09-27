@@ -50,8 +50,6 @@ public class Parallel extends Chart implements Serializable {
     
     private String progressiveChunkMode; // Default: 'sequential'
     
-    private Map<String, Object> data; //
-    
     private String zlevel; // Default: 0
     
     private String z; // Default: 2

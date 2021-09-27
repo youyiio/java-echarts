@@ -23,7 +23,7 @@ public class AreaStyle implements Serializable {
     
     private static final long serialVersionUID = 1L;
 
-    private Map<String, Object> color; // Default: '[\'rgba(250,250,250,0.3)\',\'rgba(200,200,200,0.3)\']'
+    private Object[] color; // Default: '[\'rgba(250,250,250,0.3)\',\'rgba(200,200,200,0.3)\']'
     
     private Integer shadowBlur; //
     

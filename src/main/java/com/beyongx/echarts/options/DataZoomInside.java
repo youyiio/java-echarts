@@ -59,7 +59,7 @@ public class DataZoomInside implements Serializable {
     
     private String throttle; // Default: 100
     
-    private Map<String, Object> rangeMode; //
+    private Object[] rangeMode; //
     
     private Object zoomOnMouseWheel; //boolean|string Default: true
     

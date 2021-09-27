@@ -39,7 +39,7 @@ public class DataView implements Serializable {
     
     private String contentToOption; //
     
-    private Map<String, Object> lang; // Default: '[\'数据视图\', \'关闭\', \'刷新\']'
+    private Object[] lang; // Default: '[\'数据视图\', \'关闭\', \'刷新\']'
     
     private String backgroundColor; // Default: '#fff'
     

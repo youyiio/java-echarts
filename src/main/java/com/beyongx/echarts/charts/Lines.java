@@ -68,8 +68,6 @@ public class Lines extends Chart implements Serializable {
     
     private String dataGroupId; //
     
-    private Map<String, Object> data; //
-    
     private Map<String, Object> markPoint; //
     
     private Map<String, Object> markLine; //

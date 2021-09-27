@@ -56,7 +56,7 @@ public class EffectScatter extends Chart implements Serializable {
     
     private String symbolKeepAspect; // Default: false
     
-    private Map<String, Object> symbolOffset; // Default: '[0, 0]'
+    private Object[] symbolOffset; // Default: '[0, 0]'
     
     private String cursor; // Default: 'pointer'
     
@@ -80,11 +80,9 @@ public class EffectScatter extends Chart implements Serializable {
     
     private String datasetIndex; // Default: 0
     
-    private Map<String, Object> dimensions; //
+    private Object[] dimensions; //
     
     private Map<String, Object> encode; //
-    
-    private Map<String, Object> data; //
     
     private Map<String, Object> markPoint; //
     

@@ -93,7 +93,7 @@ public class DataZoomSlider implements Serializable {
     
     private String throttle; // Default: 100
     
-    private Map<String, Object> rangeMode; //
+    private Object[] rangeMode; //
     
     private String zlevel; // Default: 0
     

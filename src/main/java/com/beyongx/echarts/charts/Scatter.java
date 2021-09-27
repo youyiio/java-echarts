@@ -50,7 +50,7 @@ public class Scatter extends Chart implements Serializable {
     
     private String symbolKeepAspect; // Default: false
     
-    private Map<String, Object> symbolOffset; // Default: '[0, 0]'
+    private Object[] symbolOffset; // Default: '[0, 0]'
     
     private String large; // Default: false
     
@@ -78,7 +78,7 @@ public class Scatter extends Chart implements Serializable {
     
     private String progressiveThreshold; // Default: 3000
     
-    private Map<String, Object> dimensions; //
+    private Object[] dimensions; //
     
     private Map<String, Object> encode; //
     
@@ -87,8 +87,6 @@ public class Scatter extends Chart implements Serializable {
     private String datasetIndex; // Default: 0
     
     private String dataGroupId; //
-    
-    private Map<String, Object> data; //
     
     private Map<String, Object> markPoint; //
     

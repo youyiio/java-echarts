@@ -28,7 +28,7 @@ public class Title implements Serializable {
 
     private String show; // Default: true
     
-    private Map<String, Object> offsetCenter; // Default: '[0, \'20%\']'
+    private Object[] offsetCenter; // Default: '[0, \'20%\']'
     
     private String color; // Default: '#464646'
     
@@ -90,7 +90,7 @@ public class Title implements Serializable {
     
     private String lineOverflow; // Default: 'none'
     
-    private Map<String, Object> rich; //
+    private Object[] rich; //
     
     private String valueAnimation; // Default: true
     

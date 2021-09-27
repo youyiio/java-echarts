@@ -89,7 +89,7 @@ public class AxisLabel implements Serializable {
     
     private String lineOverflow; // Default: 'none'
     
-    private Map<String, Object> rich; //
+    private Object[] rich; //
     
     
 

@@ -23,7 +23,7 @@ public class Shape implements Serializable {
     
     private static final long serialVersionUID = 1L;
 
-    private Map<String, Object> points; //
+    private Object[] points; //
     
     private Object smooth; //number|string Default: 'undefined'
     

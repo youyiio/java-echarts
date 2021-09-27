@@ -29,7 +29,7 @@ public class Pointer implements Serializable {
     
     private String icon; //
     
-    private Map<String, Object> offsetCenter; // Default: '[0, 0]'
+    private Object[] offsetCenter; // Default: '[0, 0]'
     
     private Object length; //string|number Default: '60%'
     

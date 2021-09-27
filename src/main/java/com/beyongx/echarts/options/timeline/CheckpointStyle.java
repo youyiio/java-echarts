@@ -31,7 +31,7 @@ public class CheckpointStyle implements Serializable {
     
     private String symbolKeepAspect; // Default: false
     
-    private Map<String, Object> symbolOffset; // Default: '[0, 0]'
+    private Object[] symbolOffset; // Default: '[0, 0]'
     
     private String color; // Default: '#316bf3'
     

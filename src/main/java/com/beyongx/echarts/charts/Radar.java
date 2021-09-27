@@ -38,7 +38,7 @@ public class Radar extends Chart implements Serializable {
     
     private String symbolKeepAspect; // Default: false
     
-    private Map<String, Object> symbolOffset; // Default: '[0, 0]'
+    private Object[] symbolOffset; // Default: '[0, 0]'
     
     private Map<String, Object> label; //
     
@@ -59,8 +59,6 @@ public class Radar extends Chart implements Serializable {
     private Object selectedMode; //boolean|string Default: false
     
     private String dataGroupId; //
-    
-    private Map<String, Object> data; //
     
     private String zlevel; // Default: 0
     

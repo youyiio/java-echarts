@@ -31,7 +31,7 @@ public class Anchor implements Serializable {
     
     private String icon; // Default: 'circle'
     
-    private Map<String, Object> offsetCenter; // Default: '[0, 0]'
+    private Object[] offsetCenter; // Default: '[0, 0]'
     
     private String keepAspect; // Default: false
     

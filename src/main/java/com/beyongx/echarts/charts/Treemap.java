@@ -60,7 +60,7 @@ public class Treemap extends Chart implements Serializable {
     
     private Integer visualMax; //
     
-    private Map<String, Object> colorAlpha; //
+    private Object[] colorAlpha; //
     
     private Integer colorSaturation; //
     
@@ -90,9 +90,7 @@ public class Treemap extends Chart implements Serializable {
     
     private Object labelLayout; //Object|Function
     
-    private Map<String, Object> levels; //
-    
-    private Map<String, Object> data; //
+    private Object[] levels; //
     
     private String silent; // Default: false
     

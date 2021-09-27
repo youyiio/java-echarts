@@ -40,7 +40,7 @@ public class Boxplot extends Chart implements Serializable {
     
     private String layout; //
     
-    private Map<String, Object> boxWidth; // Default: '[7, 50]'
+    private Object[] boxWidth; // Default: '[7, 50]'
     
     private Map<String, Object> itemStyle; //
     
@@ -52,13 +52,11 @@ public class Boxplot extends Chart implements Serializable {
     
     private Object selectedMode; //boolean|string Default: false
     
-    private Map<String, Object> dimensions; //
+    private Object[] dimensions; //
     
     private Map<String, Object> encode; //
     
     private String dataGroupId; //
-    
-    private Map<String, Object> data; //
     
     private Map<String, Object> markPoint; //
     

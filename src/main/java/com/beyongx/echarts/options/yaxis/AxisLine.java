@@ -31,7 +31,7 @@ public class AxisLine implements Serializable {
     
     private Object symbol; //string|Array Default: 'none'
     
-    private Map<String, Object> symbolSize; // Default: '[10, 15]'
+    private Object[] symbolSize; // Default: '[10, 15]'
     
     private Object symbolOffset; //Array|number Default: '[0, 0]'
     

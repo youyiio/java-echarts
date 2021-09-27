@@ -66,13 +66,11 @@ public class Candlestick extends Chart implements Serializable {
     
     private String progressiveChunkMode; // Default: 'mod'
     
-    private Map<String, Object> dimensions; //
+    private Object[] dimensions; //
     
     private Map<String, Object> encode; //
     
     private String dataGroupId; //
-    
-    private Map<String, Object> data; //
     
     private Map<String, Object> markPoint; //
     

@@ -31,7 +31,7 @@ public class Shape implements Serializable {
     
     private Integer height; // Default: '0'
     
-    private Map<String, Object> r; //
+    private Object[] r; //
     
     
 

@@ -53,8 +53,8 @@ public class Option {
 
     public Option()
     {
-        series = new ArrayList<Chart>();
-        color = new ArrayList<String>();
+        //series = new ArrayList<Chart>();
+        //color = new ArrayList<String>();
     }
 
     public Option title(Title title)
@@ -105,14 +105,20 @@ public class Option {
     //     return this;
     // }
 
-    public Option series(Chart[] charts)
+    public Option series(Chart... charts)
     {
+        if (this.series == null) {
+            this.series = new ArrayList<Chart>();
+        }
         this.series.addAll(Arrays.asList(charts));
         return this;
     }
 
     public Option addSeries(Chart chart)
     {
+        if (this.series == null) {
+            this.series = new ArrayList<Chart>();
+        }
         this.series.add(chart);
         return this;
     }
@@ -246,7 +252,7 @@ public class Option {
     public Option color(String[] colors)    
     {
         if (this.color == null) {
-            this.color = new ArrayList();
+            this.color = new ArrayList<String>();
         }
         this.color.addAll(Arrays.asList(colors));
         return this;

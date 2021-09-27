@@ -1,10 +1,6 @@
 package com.beyongx.echarts;
 
-import java.util.List;
-
-import lombok.Getter;
-
-@Getter
+@lombok.Data
 public abstract class Chart {
     //图表类型
     protected String type;
@@ -13,6 +9,11 @@ public abstract class Chart {
     // protected String name;
     // //抽样形式
     // protected String sampling;
-    // //图表数据
-    // protected List<?> data;
+
+    //图表数据
+    protected Object[] data;
+    
+    public void data(Object...data ) {
+        this.data = data;
+    }
 }

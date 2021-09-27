@@ -52,7 +52,7 @@ public class Custom extends Chart implements Serializable {
     
     private Object selectedMode; //boolean|string Default: false
     
-    private Map<String, Object> dimensions; //
+    private Object[] dimensions; //
     
     private Map<String, Object> encode; //
     
@@ -61,8 +61,6 @@ public class Custom extends Chart implements Serializable {
     private String datasetIndex; // Default: 0
     
     private String dataGroupId; //
-    
-    private Map<String, Object> data; //
     
     private String clip; // Default: false
     

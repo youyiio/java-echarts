@@ -47,7 +47,7 @@ public class AxisPointer implements Serializable {
     
     private Map<String, Object> handle; //
     
-    private Map<String, Object> link; //
+    private Object[] link; //
     
     private String triggerOn; // Default: 'mousemove|click'
     

@@ -76,13 +76,13 @@ public abstract class Engine {
     {
         String attributeString = "";
 
-        if (attribute.containsKey("style")) {
+        if (!attribute.containsKey("style")) {
             attribute.put("style", "height:400px");
         }
 
         for (String k : attribute.keySet()) {
             String v = attribute.get(k);
-            attributeString += " k=\"" + this._h(v) + "\"";
+            attributeString += " " + k + "=\"" + this._h(v) + "\"";
         }
 
         return attributeString;

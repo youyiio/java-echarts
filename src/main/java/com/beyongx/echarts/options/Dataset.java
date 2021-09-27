@@ -28,7 +28,7 @@ public class Dataset implements Serializable {
     
     private Object source; //Array|Object
     
-    private Map<String, Object> dimensions; //
+    private Object[] dimensions; //
     
     private String sourceHeader; //
     

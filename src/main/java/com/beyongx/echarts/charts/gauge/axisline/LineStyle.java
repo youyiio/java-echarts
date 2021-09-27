@@ -23,7 +23,7 @@ public class LineStyle implements Serializable {
     
     private static final long serialVersionUID = 1L;
 
-    private Map<String, Object> color; //
+    private Object[] color; //
     
     private String width; // Default: 10
     

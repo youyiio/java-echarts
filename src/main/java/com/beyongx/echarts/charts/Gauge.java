@@ -32,7 +32,7 @@ public class Gauge extends Chart implements Serializable {
     
     private String z; // Default: 2
     
-    private Map<String, Object> center; // Default: '[\'50%\', \'50%\']'
+    private Object[] center; // Default: '[\'50%\', \'50%\']'
     
     private Object radius; //number|string Default: '75%'
     
@@ -43,8 +43,6 @@ public class Gauge extends Chart implements Serializable {
     private String endAngle; // Default: -45
     
     private String clockwise; // Default: true
-    
-    private Map<String, Object> data; //
     
     private String min; // Default: 0
     

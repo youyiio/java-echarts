@@ -40,7 +40,7 @@ public class Graph extends Chart implements Serializable {
     
     private String calendarIndex; // Default: 0
     
-    private Map<String, Object> center; //
+    private Object[] center; //
     
     private String zoom; // Default: 1
     
@@ -80,17 +80,15 @@ public class Graph extends Chart implements Serializable {
     
     private Object selectedMode; //boolean|string Default: false
     
-    private Map<String, Object> categories; //
+    private Object[] categories; //
     
     private Object autoCurveness; //boolean|number|Array Default: false
     
-    private Map<String, Object> data; //
+    private Object[] nodes; //
     
-    private Map<String, Object> nodes; //
+    private Object[] links; //
     
-    private Map<String, Object> links; //
-    
-    private Map<String, Object> edges; //
+    private Object[] edges; //
     
     private Map<String, Object> markPoint; //
     

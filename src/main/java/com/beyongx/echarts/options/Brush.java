@@ -165,7 +165,7 @@ public class Brush implements Serializable {
 
     private String id; //
     
-    private Map<String, Object> toolbox; // Default: '[\'rect\', \'polygon\', \'keep\', \'clear\']'
+    private Object[] toolbox; // Default: '[\'rect\', \'polygon\', \'keep\', \'clear\']'
     
     private Object brushLink; //Array|string
     

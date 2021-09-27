@@ -163,7 +163,7 @@ public class Brush implements Serializable {
     
     private static final long serialVersionUID = 1L;
 
-    private Map<String, Object> type; //
+    private Object[] type; //
     
     private Map<String, Object> icon; //
     

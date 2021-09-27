@@ -32,7 +32,7 @@ public class Radar implements Serializable {
     
     private String z; // Default: 2
     
-    private Map<String, Object> center; // Default: '[\'50%\', \'50%\']'
+    private Object[] center; // Default: '[\'50%\', \'50%\']'
     
     private Object radius; //number|string|Array Default: '75%'
     
@@ -62,7 +62,7 @@ public class Radar implements Serializable {
     
     private Map<String, Object> splitArea; //
     
-    private Map<String, Object> indicator; //
+    private Object[] indicator; //
     
     
 

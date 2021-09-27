@@ -27,9 +27,9 @@ public class VisualMapPiecewise implements Serializable {
     
     private String splitNumber; // Default: 5
     
-    private Map<String, Object> pieces; //
+    private Object[] pieces; //
     
-    private Map<String, Object> categories; //
+    private Object[] categories; //
     
     private Integer min; //
     
@@ -51,7 +51,7 @@ public class VisualMapPiecewise implements Serializable {
     
     private String align; // Default: 'auto'
     
-    private Map<String, Object> text; //
+    private Object[] text; //
     
     private String textGap; // Default: 10
     
@@ -97,7 +97,7 @@ public class VisualMapPiecewise implements Serializable {
     
     private String borderWidth; // Default: 0
     
-    private Map<String, Object> color; // Default: '[\'#bf444c\', \'#d88273\', \'#f6efa6\']'
+    private Object[] color; // Default: '[\'#bf444c\', \'#d88273\', \'#f6efa6\']'
     
     private Map<String, Object> textStyle; //
     

@@ -81,7 +81,7 @@ public class Group implements Serializable {
     
     private String diffChildrenByName; // Default: false
     
-    private Map<String, Object> children; //
+    private Object[] children; //
     
     private String onclick; //
     

@@ -23,9 +23,9 @@ public class PageIcons implements Serializable {
     
     private static final long serialVersionUID = 1L;
 
-    private Map<String, Object> horizontal; //
+    private Object[] horizontal; //
     
-    private Map<String, Object> vertical; //
+    private Object[] vertical; //
     
     
 

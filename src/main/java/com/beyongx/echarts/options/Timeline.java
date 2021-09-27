@@ -168,7 +168,7 @@ public class Timeline implements Serializable {
     
     private String symbolKeepAspect; // Default: false
     
-    private Map<String, Object> symbolOffset; // Default: '[0, 0]'
+    private Object[] symbolOffset; // Default: '[0, 0]'
     
     private Map<String, Object> lineStyle; //
     
@@ -184,7 +184,7 @@ public class Timeline implements Serializable {
     
     private Map<String, Object> emphasis; //
     
-    private Map<String, Object> data; //
+    private Object[] data; //
     
     
 

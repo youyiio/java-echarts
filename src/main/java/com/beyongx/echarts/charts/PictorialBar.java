@@ -74,7 +74,7 @@ public class PictorialBar extends Chart implements Serializable {
     
     private String symbolPosition; // Default: 'start'
     
-    private Map<String, Object> symbolOffset; // Default: '[0, 0]'
+    private Object[] symbolOffset; // Default: '[0, 0]'
     
     private Integer symbolRotate; //
     
@@ -92,13 +92,11 @@ public class PictorialBar extends Chart implements Serializable {
     
     private String hoverAnimation; // Default: false
     
-    private Map<String, Object> dimensions; //
+    private Object[] dimensions; //
     
     private Map<String, Object> encode; //
     
     private String dataGroupId; //
-    
-    private Map<String, Object> data; //
     
     private Map<String, Object> markPoint; //
     

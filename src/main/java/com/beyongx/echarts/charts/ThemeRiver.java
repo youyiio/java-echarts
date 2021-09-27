@@ -46,7 +46,7 @@ public class ThemeRiver extends Chart implements Serializable {
     
     private String coordinateSystem; // Default: '"single"'
     
-    private Map<String, Object> boundaryGap; // Default: '["10%", "10%"]'
+    private Object[] boundaryGap; // Default: '["10%", "10%"]'
     
     private String singleAxisIndex; // Default: 0
     
@@ -65,8 +65,6 @@ public class ThemeRiver extends Chart implements Serializable {
     private Map<String, Object> select; //
     
     private Object selectedMode; //boolean|string Default: false
-    
-    private Map<String, Object> data; //
     
     private Map<String, Object> tooltip; //
     

@@ -31,7 +31,7 @@ public class Label implements Serializable {
     
     private Integer rotate; //
     
-    private Map<String, Object> offset; //
+    private Object[] offset; //
     
     private String color; // Default: '"#fff"'
     
@@ -97,7 +97,7 @@ public class Label implements Serializable {
     
     private String lineOverflow; // Default: 'none'
     
-    private Map<String, Object> rich; //
+    private Object[] rich; //
     
     
 

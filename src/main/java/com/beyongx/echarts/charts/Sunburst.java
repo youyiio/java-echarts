@@ -30,11 +30,9 @@ public class Sunburst extends Chart implements Serializable {
     
     private String z; // Default: 2
     
-    private Map<String, Object> center; // Default: '[\'50%\', \'50%\']'
+    private Object[] center; // Default: '[\'50%\', \'50%\']'
     
     private Object radius; //number|string|Array Default: '[0, \'75%\']'
-    
-    private Map<String, Object> data; //
     
     private Object labelLayout; //Object|Function
     
@@ -58,7 +56,7 @@ public class Sunburst extends Chart implements Serializable {
     
     private Object selectedMode; //boolean|string Default: false
     
-    private Map<String, Object> levels; //
+    private Object[] levels; //
     
     private String animation; // Default: true
     

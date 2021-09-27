@@ -84,7 +84,7 @@ public class Pie extends Chart implements Serializable {
     
     private Map<String, Object> select; //
     
-    private Map<String, Object> center; // Default: '[\'50%\', \'50%\']'
+    private Object[] center; // Default: '[\'50%\', \'50%\']'
     
     private Object radius; //number|string|Array Default: '[0, \'75%\']'
     
@@ -92,13 +92,11 @@ public class Pie extends Chart implements Serializable {
     
     private String datasetIndex; // Default: 0
     
-    private Map<String, Object> dimensions; //
+    private Object[] dimensions; //
     
     private Map<String, Object> encode; //
     
     private String dataGroupId; //
-    
-    private Map<String, Object> data; //
     
     private Map<String, Object> markPoint; //
     

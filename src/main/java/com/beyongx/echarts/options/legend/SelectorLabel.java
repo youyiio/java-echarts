@@ -29,7 +29,7 @@ public class SelectorLabel implements Serializable {
     
     private Integer rotate; //
     
-    private Map<String, Object> offset; //
+    private Object[] offset; //
     
     private String color; // Default: '"#fff"'
     
@@ -95,7 +95,7 @@ public class SelectorLabel implements Serializable {
     
     private String lineOverflow; // Default: 'none'
     
-    private Map<String, Object> rich; //
+    private Object[] rich; //
     
     
 

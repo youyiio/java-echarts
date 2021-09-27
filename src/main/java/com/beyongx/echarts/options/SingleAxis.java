@@ -93,7 +93,7 @@ public class SingleAxis implements Serializable {
     
     private Map<String, Object> splitArea; //
     
-    private Map<String, Object> data; //
+    private Object[] data; //
     
     private Map<String, Object> axisPointer; //
     

@@ -25,7 +25,7 @@ public class MagicType implements Serializable {
 
     private String show; // Default: true
     
-    private Map<String, Object> type; //
+    private Object[] type; //
     
     private Map<String, Object> title; //
     

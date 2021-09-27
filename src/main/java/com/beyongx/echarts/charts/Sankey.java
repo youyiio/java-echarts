@@ -54,7 +54,7 @@ public class Sankey extends Chart implements Serializable {
     
     private String draggable; // Default: true
     
-    private Map<String, Object> levels; //
+    private Object[] levels; //
     
     private Map<String, Object> label; //
     
@@ -72,13 +72,11 @@ public class Sankey extends Chart implements Serializable {
     
     private Object selectedMode; //boolean|string Default: false
     
-    private Map<String, Object> data; //
+    private Object[] nodes; //
     
-    private Map<String, Object> nodes; //
+    private Object[] links; //
     
-    private Map<String, Object> links; //
-    
-    private Map<String, Object> edges; //
+    private Object[] edges; //
     
     private String silent; // Default: false
     

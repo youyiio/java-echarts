@@ -67,7 +67,7 @@ public class ParallelAxisDefault implements Serializable {
     
     private Map<String, Object> axisLabel; //
     
-    private Map<String, Object> data; //
+    private Object[] data; //
     
     
 

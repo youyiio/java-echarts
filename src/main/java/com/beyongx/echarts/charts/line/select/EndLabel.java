@@ -27,7 +27,7 @@ public class EndLabel implements Serializable {
     
     private Integer rotate; //
     
-    private Map<String, Object> offset; //
+    private Object[] offset; //
     
     private Object formatter; //string|Function
     
@@ -95,7 +95,7 @@ public class EndLabel implements Serializable {
     
     private String lineOverflow; // Default: 'none'
     
-    private Map<String, Object> rich; //
+    private Object[] rich; //
     
     
 

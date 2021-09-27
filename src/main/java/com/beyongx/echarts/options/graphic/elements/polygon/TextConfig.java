@@ -29,7 +29,7 @@ public class TextConfig implements Serializable {
     
     private Map<String, Object> layoutRect; //
     
-    private Map<String, Object> offset; //
+    private Object[] offset; //
     
     private String origin; //
     

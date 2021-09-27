@@ -90,7 +90,7 @@ public class Bar extends Chart implements Serializable {
     
     private String progressiveChunkMode; // Default: 'mod'
     
-    private Map<String, Object> dimensions; //
+    private Object[] dimensions; //
     
     private Map<String, Object> encode; //
     
@@ -99,8 +99,6 @@ public class Bar extends Chart implements Serializable {
     private String datasetIndex; // Default: 0
     
     private String dataGroupId; //
-    
-    private Map<String, Object> data; //
     
     private String clip; // Default: true
     

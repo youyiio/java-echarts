@@ -85,11 +85,11 @@ public class Detail implements Serializable {
     
     private String lineOverflow; // Default: 'none'
     
-    private Map<String, Object> rich; //
+    private Object[] rich; //
     
     private String valueAnimation; // Default: true
     
-    private Map<String, Object> offsetCenter; // Default: '[0, \'40%\']'
+    private Object[] offsetCenter; // Default: '[0, \'40%\']'
     
     private Object formatter; //Function|string
     

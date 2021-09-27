@@ -29,7 +29,7 @@ public class VisualMapContinuous implements Serializable {
     
     private Integer max; //
     
-    private Map<String, Object> range; //
+    private Object[] range; //
     
     private String calculable; // Default: false
     
@@ -45,7 +45,7 @@ public class VisualMapContinuous implements Serializable {
     
     private String align; // Default: 'auto'
     
-    private Map<String, Object> text; //
+    private Object[] text; //
     
     private String textGap; // Default: 10
     
@@ -85,7 +85,7 @@ public class VisualMapContinuous implements Serializable {
     
     private String borderWidth; // Default: 0
     
-    private Map<String, Object> color; // Default: '[\'#bf444c\', \'#d88273\', \'#f6efa6\']'
+    private Object[] color; // Default: '[\'#bf444c\', \'#d88273\', \'#f6efa6\']'
     
     private Map<String, Object> textStyle; //
     

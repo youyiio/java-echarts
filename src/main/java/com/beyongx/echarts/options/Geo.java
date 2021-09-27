@@ -45,11 +45,11 @@ public class Geo implements Serializable {
     
     private Object roam; //boolean|string Default: false
     
-    private Map<String, Object> center; //
+    private Object[] center; //
     
     private String aspectScale; // Default: '0.75'
     
-    private Map<String, Object> boundingCoords; //
+    private Object[] boundingCoords; //
     
     private String zoom; // Default: 1
     
@@ -83,11 +83,11 @@ public class Geo implements Serializable {
     
     private Object bottom; //string|number Default: 'auto'
     
-    private Map<String, Object> layoutCenter; //
+    private Object[] layoutCenter; //
     
     private Object layoutSize; //number|string
     
-    private Map<String, Object> regions; //
+    private Object[] regions; //
     
     private String silent; // Default: false
     

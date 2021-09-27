@@ -31,7 +31,7 @@ public class MarkPoint implements Serializable {
     
     private String symbolKeepAspect; // Default: false
     
-    private Map<String, Object> symbolOffset; // Default: '[0, 0]'
+    private Object[] symbolOffset; // Default: '[0, 0]'
     
     private String silent; // Default: false
     
@@ -43,7 +43,7 @@ public class MarkPoint implements Serializable {
     
     private Map<String, Object> blur; //
     
-    private Map<String, Object> data; //
+    private Object[] data; //
     
     private String animation; // Default: true
     

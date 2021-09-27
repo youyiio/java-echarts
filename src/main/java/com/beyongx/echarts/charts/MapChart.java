@@ -32,11 +32,11 @@ public class MapChart extends Chart implements Serializable {
     
     private Object roam; //boolean|string Default: false
     
-    private Map<String, Object> center; //
+    private Object[] center; //
     
     private String aspectScale; // Default: '0.75'
     
-    private Map<String, Object> boundingCoords; //
+    private Object[] boundingCoords; //
     
     private String zoom; // Default: 1
     
@@ -68,7 +68,7 @@ public class MapChart extends Chart implements Serializable {
     
     private Object bottom; //string|number Default: 'auto'
     
-    private Map<String, Object> layoutCenter; //
+    private Object[] layoutCenter; //
     
     private Object layoutSize; //number|string
     
@@ -88,8 +88,6 @@ public class MapChart extends Chart implements Serializable {
     
     private Map<String, Object> labelLine; //
     
-    private Map<String, Object> data; //
-    
     private Map<String, Object> markPoint; //
     
     private Map<String, Object> markLine; //
@@ -106,6 +104,6 @@ public class MapChart extends Chart implements Serializable {
 
     public MapChart()
     {
-        this.type = "mapchart";
+        this.type = "map";
     }
 }

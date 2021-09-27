@@ -44,7 +44,7 @@ public class Line extends Chart implements Serializable {
     
     private String symbolKeepAspect; // Default: false
     
-    private Map<String, Object> symbolOffset; // Default: '[0, 0]'
+    private Object[] symbolOffset; // Default: '[0, 0]'
     
     private String showSymbol; // Default: true
     
@@ -90,7 +90,7 @@ public class Line extends Chart implements Serializable {
     
     private String sampling; //
     
-    private Map<String, Object> dimensions; //
+    private Object[] dimensions; //
     
     private Map<String, Object> encode; //
     
@@ -99,8 +99,6 @@ public class Line extends Chart implements Serializable {
     private String datasetIndex; // Default: 0
     
     private String dataGroupId; //
-    
-    private Map<String, Object> data; //
     
     private Map<String, Object> markPoint; //
     

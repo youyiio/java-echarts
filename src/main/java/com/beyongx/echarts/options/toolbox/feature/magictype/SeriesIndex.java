@@ -23,9 +23,9 @@ public class SeriesIndex implements Serializable {
     
     private static final long serialVersionUID = 1L;
 
-    private Map<String, Object> line; //
+    private Object[] line; //
     
-    private Map<String, Object> bar; //
+    private Object[] bar; //
     
     
 

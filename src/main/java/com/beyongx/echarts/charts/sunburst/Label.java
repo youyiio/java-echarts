@@ -35,7 +35,7 @@ public class Label implements Serializable {
     
     private String distance; // Default: 5
     
-    private Map<String, Object> offset; //
+    private Object[] offset; //
     
     private Object formatter; //string|Function
     
@@ -101,7 +101,7 @@ public class Label implements Serializable {
     
     private String lineOverflow; // Default: 'none'
     
-    private Map<String, Object> rich; //
+    private Object[] rich; //
     
     
 

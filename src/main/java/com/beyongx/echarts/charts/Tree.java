@@ -54,7 +54,7 @@ public class Tree extends Chart implements Serializable {
     
     private String symbolKeepAspect; // Default: false
     
-    private Map<String, Object> symbolOffset; // Default: '[0, 0]'
+    private Object[] symbolOffset; // Default: '[0, 0]'
     
     private String edgeShape; // Default: 'curve'
     
@@ -83,8 +83,6 @@ public class Tree extends Chart implements Serializable {
     private Object selectedMode; //boolean|string Default: false
     
     private Map<String, Object> leaves; //
-    
-    private Map<String, Object> data; //
     
     private Map<String, Object> tooltip; //
     
