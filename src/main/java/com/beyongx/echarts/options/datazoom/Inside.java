@@ -3,7 +3,7 @@
  * @author: cattong <aronter@gmail.com>
  */
 
-package com.beyongx.echarts.options;
+package com.beyongx.echarts.options.datazoom;
 
 import java.io.Serializable;
 import java.util.Map;
@@ -19,10 +19,12 @@ import lombok.EqualsAndHashCode;
 
 @lombok.Data
 @EqualsAndHashCode(callSuper = false)
-public class DataZoomInside implements Serializable {
+public class Inside extends com.beyongx.echarts.options.DataZoom implements Serializable {
     
     private static final long serialVersionUID = 1L;
 
+    private String type; // Default: 'inside'
+    
     private String id; //
     
     private String disabled; // Default: false
@@ -72,11 +74,11 @@ public class DataZoomInside implements Serializable {
     
 
 
-    public DataZoomInside()
+    public Inside()
     {
     }
 
-    public DataZoomInside(Map<String, Object> property)
+    public Inside(Map<String, Object> property)
     {
     }
 }

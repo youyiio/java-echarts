@@ -3,7 +3,7 @@
  * @author: cattong <aronter@gmail.com>
  */
 
-package com.beyongx.echarts.options.visualmapcontinuous;
+package com.beyongx.echarts.options.datazoom.slider;
 
 import java.io.Serializable;
 import java.util.Map;
@@ -19,22 +19,22 @@ import lombok.EqualsAndHashCode;
 
 @lombok.Data
 @EqualsAndHashCode(callSuper = false)
-public class Controller implements Serializable {
+public class SelectedDataBackground implements Serializable {
     
     private static final long serialVersionUID = 1L;
 
-    private Map<String, Object> inRange; //
+    private Map<String, Object> lineStyle; //
     
-    private Map<String, Object> outOfRange; //
+    private Map<String, Object> areaStyle; //
     
     
 
 
-    public Controller()
+    public SelectedDataBackground()
     {
     }
 
-    public Controller(Map<String, Object> property)
+    public SelectedDataBackground(Map<String, Object> property)
     {
     }
 }

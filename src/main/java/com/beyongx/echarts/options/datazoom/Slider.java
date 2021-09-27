@@ -3,7 +3,7 @@
  * @author: cattong <aronter@gmail.com>
  */
 
-package com.beyongx.echarts.options;
+package com.beyongx.echarts.options.datazoom;
 
 import java.io.Serializable;
 import java.util.Map;
@@ -19,10 +19,12 @@ import lombok.EqualsAndHashCode;
 
 @lombok.Data
 @EqualsAndHashCode(callSuper = false)
-public class DataZoomSlider implements Serializable {
+public class Slider extends com.beyongx.echarts.options.DataZoom implements Serializable {
     
     private static final long serialVersionUID = 1L;
 
+    private String type; // Default: 'slider'
+    
     private String id; //
     
     private String show; // Default: true
@@ -116,11 +118,11 @@ public class DataZoomSlider implements Serializable {
     
 
 
-    public DataZoomSlider()
+    public Slider()
     {
     }
 
-    public DataZoomSlider(Map<String, Object> property)
+    public Slider(Map<String, Object> property)
     {
     }
 }

@@ -3,7 +3,7 @@
  * @author: cattong <aronter@gmail.com>
  */
 
-package com.beyongx.echarts.options.visualmapcontinuous;
+package com.beyongx.echarts.options.visualmap.piecewise;
 
 import java.io.Serializable;
 import java.util.Map;

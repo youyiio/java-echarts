@@ -17,6 +17,8 @@ public class Option {
     private XAxis xAxis;
     private YAxis yAxis;
   
+    private List<DataZoom> dataZoom;
+
     private List<Chart> series;
     private Grid grid;
 
@@ -24,6 +26,8 @@ public class Option {
     private RadiusAxis radiusAxis;
     private AngleAxis angleAxis;
     private Radar radar;
+    private List<VisualMap> visualMap;
+
     private AxisPointer axisPointer;
     private Brush brush;
     private Geo geo;
@@ -93,17 +97,23 @@ public class Option {
         return this;
     }
 
-    // public Option dataZooms(DataZoom[] dataZooms)
-    // {
-    //     this.dataZoom = dataZooms;
-    //     return this;
-    // }
+    public Option dataZooms(DataZoom... dataZooms)
+    {
+        if (this.dataZoom == null) {
+            this.dataZoom = new ArrayList<DataZoom>();
+        }
+        this.dataZoom.addAll(Arrays.asList(dataZooms));
+        return this;
+    }
 
-    // public Option addDataZoom(DataZoom dataZoom)
-    // {
-    //     this.dataZoom = dataZoom;
-    //     return this;
-    // }
+    public Option addDataZoom(DataZoom dataZoom)
+    {
+        if (this.dataZoom == null) {
+            this.dataZoom = new ArrayList<DataZoom>();
+        }
+        this.dataZoom.add(dataZoom);
+        return this;
+    }
 
     public Option series(Chart... charts)
     {
@@ -153,17 +163,23 @@ public class Option {
         return this;
     }
 
-    // public Option visualMaps(VisualMap[] visualMaps)
-    // {
-    //     this.visualMap = visualMaps;
-    //     return this;
-    // }
+    public Option visualMaps(VisualMap... visualMaps)
+    {
+        if (this.visualMap == null) {
+            this.visualMap = new ArrayList<VisualMap>();
+        }
+        this.visualMap.addAll(Arrays.asList(visualMaps));
+        return this;
+    }
 
-    // public Option addVisualMap(VisualMap visualMap)
-    // {
-    //     this.visualMap[] = visualMap;
-    //     return this;
-    // }
+    public Option addVisualMap(VisualMap visualMap)
+    {
+        if (this.visualMap == null) {
+            this.visualMap = new ArrayList<VisualMap>();
+        }
+        this.visualMap.add(visualMap);
+        return this;
+    }
 
     public Option axisPointer(AxisPointer axisPointer)
     {

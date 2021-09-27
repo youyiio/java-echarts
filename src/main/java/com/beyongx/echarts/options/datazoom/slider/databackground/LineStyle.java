@@ -3,7 +3,7 @@
  * @author: cattong <aronter@gmail.com>
  */
 
-package com.beyongx.echarts.options.visualmapcontinuous;
+package com.beyongx.echarts.options.datazoom.slider.databackground;
 
 import java.io.Serializable;
 import java.util.Map;
@@ -19,25 +19,23 @@ import lombok.EqualsAndHashCode;
 
 @lombok.Data
 @EqualsAndHashCode(callSuper = false)
-public class HandleStyle implements Serializable {
+public class LineStyle implements Serializable {
     
     private static final long serialVersionUID = 1L;
 
-    private String color; // Default: '自适应'
+    private String color; // Default: '#d2dbee'
     
-    private String borderColor; // Default: '#fff'
+    private String width; // Default: '0.5'
     
-    private String borderWidth; // Default: 1
+    private Object type; //string|number|Array Default: 'solid'
     
-    private Object borderType; //string|number|Array Default: 'solid'
+    private String dashOffset; // Default: 0
     
-    private String borderDashOffset; // Default: 0
+    private String cap; // Default: 'butt'
     
-    private String borderCap; // Default: 'butt'
+    private String join; // Default: 'bevel'
     
-    private String borderJoin; // Default: 'bevel'
-    
-    private String borderMiterLimit; // Default: 10
+    private String miterLimit; // Default: 10
     
     private Integer shadowBlur; //
     
@@ -52,11 +50,11 @@ public class HandleStyle implements Serializable {
     
 
 
-    public HandleStyle()
+    public LineStyle()
     {
     }
 
-    public HandleStyle(Map<String, Object> property)
+    public LineStyle(Map<String, Object> property)
     {
     }
 }

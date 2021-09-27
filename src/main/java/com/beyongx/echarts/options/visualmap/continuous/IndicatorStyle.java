@@ -3,7 +3,7 @@
  * @author: cattong <aronter@gmail.com>
  */
 
-package com.beyongx.echarts.options.datazoomslider;
+package com.beyongx.echarts.options.visualmap.continuous;
 
 import java.io.Serializable;
 import java.util.Map;
@@ -19,15 +19,15 @@ import lombok.EqualsAndHashCode;
 
 @lombok.Data
 @EqualsAndHashCode(callSuper = false)
-public class BrushStyle implements Serializable {
+public class IndicatorStyle implements Serializable {
     
     private static final long serialVersionUID = 1L;
 
-    private String color; // Default: 'rgba(135,175,274,0.15)'
+    private String color; // Default: '自适应'
     
-    private String borderColor; // Default: '#000'
+    private String borderColor; // Default: '#fff'
     
-    private String borderWidth; // Default: 0
+    private String borderWidth; // Default: 2
     
     private Object borderType; //string|number|Array Default: 'solid'
     
@@ -39,24 +39,24 @@ public class BrushStyle implements Serializable {
     
     private String borderMiterLimit; // Default: 10
     
-    private Integer shadowBlur; //
+    private String shadowBlur; // Default: 2
     
-    private String shadowColor; //
+    private String shadowColor; // Default: 'rgba(0,0,0,0.2)'
     
-    private String shadowOffsetX; // Default: 0
+    private String shadowOffsetX; // Default: 1
     
-    private String shadowOffsetY; // Default: 0
+    private String shadowOffsetY; // Default: 1
     
     private String opacity; // Default: 1
     
     
 
 
-    public BrushStyle()
+    public IndicatorStyle()
     {
     }
 
-    public BrushStyle(Map<String, Object> property)
+    public IndicatorStyle(Map<String, Object> property)
     {
     }
 }

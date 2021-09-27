@@ -3,7 +3,7 @@
  * @author: cattong <aronter@gmail.com>
  */
 
-package com.beyongx.echarts.options.datazoomslider.emphasis;
+package com.beyongx.echarts.options.visualmap.continuous;
 
 import java.io.Serializable;
 import java.util.Map;
@@ -25,9 +25,9 @@ public class HandleStyle implements Serializable {
 
     private String color; // Default: '自适应'
     
-    private String borderColor; // Default: '#000'
+    private String borderColor; // Default: '#fff'
     
-    private String borderWidth; // Default: 0
+    private String borderWidth; // Default: 1
     
     private Object borderType; //string|number|Array Default: 'solid'
     

@@ -3,7 +3,7 @@
  * @author: cattong <aronter@gmail.com>
  */
 
-package com.beyongx.echarts.options.visualmappiecewise;
+package com.beyongx.echarts.options.datazoom.slider;
 
 import java.io.Serializable;
 import java.util.Map;

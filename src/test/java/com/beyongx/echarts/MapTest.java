@@ -7,13 +7,10 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.beyongx.echarts.charts.Line;
 import com.beyongx.echarts.charts.MapChart;
 import com.beyongx.echarts.options.Title;
 import com.beyongx.echarts.options.Tooltip;
-import com.beyongx.echarts.options.XAxis;
-import com.beyongx.echarts.options.YAxis;
-import com.beyongx.echarts.options.radar.Name;
+import com.beyongx.echarts.options.visualmap.Piecewise;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -39,12 +36,15 @@ public class MapTest
         tooltip.setFormatter("{a}<br>{b}  {c}");
         option.tooltip(tooltip);
 
-        XAxis xAxis = new XAxis();
-        xAxis.setData(new String[]{"衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"}); //["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
-        option.xAxis(xAxis);
-        option.yAxis(new YAxis());
+        Piecewise visualMap = new Piecewise();
+        visualMap.setMax(100);
+        visualMap.setMin(0);
+        visualMap.setType("continuous");
+        option.addVisualMap(visualMap);
 
         MapChart chart = new MapChart();
+        chart.setName("safety index");
+        chart.setMap("world");
         chart.setNameMap(Counties.nameMap());
 
         Map<String, Object> d1 = new HashMap<>();
@@ -70,7 +70,6 @@ public class MapTest
         option.addSeries(chart);
 
         echarts.option(option);
-
         echarts.addExtraScript("world.js", "https://www.xiaoqu.net.cn/theme/xiaoqu/static/js");
         String content = echarts.render();
         System.out.println(content);

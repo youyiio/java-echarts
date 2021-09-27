@@ -3,7 +3,7 @@
  * @author: cattong <aronter@gmail.com>
  */
 
-package com.beyongx.echarts.options.datazoomslider.databackground;
+package com.beyongx.echarts.options.datazoom.slider.selecteddatabackground;
 
 import java.io.Serializable;
 import java.util.Map;
@@ -23,7 +23,7 @@ public class AreaStyle implements Serializable {
     
     private static final long serialVersionUID = 1L;
 
-    private String color; // Default: 'd2dbee'
+    private String color; // Default: '#8fb0f7'
     
     private Integer shadowBlur; //
     

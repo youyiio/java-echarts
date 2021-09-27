@@ -3,7 +3,7 @@
  * @author: cattong <aronter@gmail.com>
  */
 
-package com.beyongx.echarts.options.visualmapcontinuous;
+package com.beyongx.echarts.options.datazoom.slider.emphasis;
 
 import java.io.Serializable;
 import java.util.Map;
@@ -19,15 +19,15 @@ import lombok.EqualsAndHashCode;
 
 @lombok.Data
 @EqualsAndHashCode(callSuper = false)
-public class IndicatorStyle implements Serializable {
+public class MoveHandleStyle implements Serializable {
     
     private static final long serialVersionUID = 1L;
 
     private String color; // Default: '自适应'
     
-    private String borderColor; // Default: '#fff'
+    private String borderColor; // Default: '#000'
     
-    private String borderWidth; // Default: 2
+    private String borderWidth; // Default: 0
     
     private Object borderType; //string|number|Array Default: 'solid'
     
@@ -39,24 +39,24 @@ public class IndicatorStyle implements Serializable {
     
     private String borderMiterLimit; // Default: 10
     
-    private String shadowBlur; // Default: 2
+    private Integer shadowBlur; //
     
-    private String shadowColor; // Default: 'rgba(0,0,0,0.2)'
+    private String shadowColor; //
     
-    private String shadowOffsetX; // Default: 1
+    private String shadowOffsetX; // Default: 0
     
-    private String shadowOffsetY; // Default: 1
+    private String shadowOffsetY; // Default: 0
     
     private String opacity; // Default: 1
     
     
 
 
-    public IndicatorStyle()
+    public MoveHandleStyle()
     {
     }
 
-    public IndicatorStyle(Map<String, Object> property)
+    public MoveHandleStyle(Map<String, Object> property)
     {
     }
 }

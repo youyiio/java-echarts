@@ -3,7 +3,7 @@
  * @author: cattong <aronter@gmail.com>
  */
 
-package com.beyongx.echarts.options;
+package com.beyongx.echarts.options.visualmap;
 
 import java.io.Serializable;
 import java.util.Map;
@@ -19,35 +19,49 @@ import lombok.EqualsAndHashCode;
 
 @lombok.Data
 @EqualsAndHashCode(callSuper = false)
-public class VisualMapContinuous implements Serializable {
+public class Piecewise extends com.beyongx.echarts.options.VisualMap implements Serializable {
     
     private static final long serialVersionUID = 1L;
 
+    private String type; // Default: 'piecewise'
+    
     private String id; //
+    
+    private String splitNumber; // Default: 5
+    
+    private Object[] pieces; //
+    
+    private Object[] categories; //
     
     private Integer min; //
     
     private Integer max; //
     
-    private Object[] range; //
+    private String minOpen; //
     
-    private String calculable; // Default: false
+    private String maxOpen; //
     
-    private String realtime; // Default: true
+    private String selectedMode; // Default: 'multiple'
     
     private String inverse; // Default: false
     
-    private String precision; // Default: 0
+    private Integer precision; //
     
     private String itemWidth; // Default: 20
     
-    private String itemHeight; // Default: 140
+    private String itemHeight; // Default: 14
     
     private String align; // Default: 'auto'
     
     private Object[] text; //
     
     private String textGap; // Default: 10
+    
+    private String showLabel; //
+    
+    private String itemGap; // Default: 10
+    
+    private String itemSymbol; // Default: 'roundRect'
     
     private String show; // Default: true
     
@@ -91,26 +105,14 @@ public class VisualMapContinuous implements Serializable {
     
     private Object formatter; //string|Function
     
-    private String handleIcon; //
-    
-    private Object handleSize; //number|string Default: '120%'
-    
-    private Map<String, Object> handleStyle; //
-    
-    private String indicatorIcon; // Default: 'circle'
-    
-    private Object indicatorSize; //number|string Default: '50%'
-    
-    private Map<String, Object> indicatorStyle; //
-    
     
 
 
-    public VisualMapContinuous()
+    public Piecewise()
     {
     }
 
-    public VisualMapContinuous(Map<String, Object> property)
+    public Piecewise(Map<String, Object> property)
     {
     }
 }

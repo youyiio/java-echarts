@@ -3,7 +3,7 @@
  * @author: cattong <aronter@gmail.com>
  */
 
-package com.beyongx.echarts.options.datazoomslider;
+package com.beyongx.echarts.options.datazoom.slider;
 
 import java.io.Serializable;
 import java.util.Map;
@@ -19,7 +19,7 @@ import lombok.EqualsAndHashCode;
 
 @lombok.Data
 @EqualsAndHashCode(callSuper = false)
-public class SelectedDataBackground implements Serializable {
+public class DataBackground implements Serializable {
     
     private static final long serialVersionUID = 1L;
 
@@ -30,11 +30,11 @@ public class SelectedDataBackground implements Serializable {
     
 
 
-    public SelectedDataBackground()
+    public DataBackground()
     {
     }
 
-    public SelectedDataBackground(Map<String, Object> property)
+    public DataBackground(Map<String, Object> property)
     {
     }
 }

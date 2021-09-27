@@ -3,7 +3,7 @@
  * @author: cattong <aronter@gmail.com>
  */
 
-package com.beyongx.echarts.options.datazoomslider.emphasis;
+package com.beyongx.echarts.options.datazoom.slider;
 
 import java.io.Serializable;
 import java.util.Map;
@@ -19,11 +19,11 @@ import lombok.EqualsAndHashCode;
 
 @lombok.Data
 @EqualsAndHashCode(callSuper = false)
-public class MoveHandleStyle implements Serializable {
+public class BrushStyle implements Serializable {
     
     private static final long serialVersionUID = 1L;
 
-    private String color; // Default: '自适应'
+    private String color; // Default: 'rgba(135,175,274,0.15)'
     
     private String borderColor; // Default: '#000'
     
@@ -52,11 +52,11 @@ public class MoveHandleStyle implements Serializable {
     
 
 
-    public MoveHandleStyle()
+    public BrushStyle()
     {
     }
 
-    public MoveHandleStyle(Map<String, Object> property)
+    public BrushStyle(Map<String, Object> property)
     {
     }
 }
