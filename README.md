@@ -31,89 +31,108 @@ Apache EChart5.0已经最新发布，在视觉效果、动画效果和大数据�
 
 **第一个EChart5.0 示例**
 ```
-use beyong\echarts\ECharts;
-use beyong\echarts\options\YAxis;
-use beyong\echarts\Option;
-use beyong\echarts\charts\Bar;
+import com.beyongx.echarts.charts.Line;
+import com.beyongx.echarts.options.Title;
+import com.beyongx.echarts.options.XAxis;
+import com.beyongx.echarts.options.YAxis;
 
-$echarts = ECharts::init("#myChart");
+ECharts echarts = ECharts.init("#myChart");
 
-$option = new Option();
-$option->title(['text' => 'ECharts 5.0入门示例']);
-$option->xAxis(["data" => ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']]);
-$option->yAxis([]);
+Option option = new Option();
+Title title = new Title();
+title.setText("ECharts 5.0 入门示例");
+title.setLeft("center");
+option.title(title);
 
-$chart = new Bar();
-$chart->data = [5, 20, 36, 10, 10, 20];
-$option->addSeries($chart);
+XAxis xAxis = new XAxis();
+xAxis.setData(new String[]{"衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"}); //["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
+option.xAxis(xAxis);
+option.yAxis(new YAxis());
 
-$echarts->option($option);
+Line chart = new Line();
+chart.data(5, 20, 36, 10, 10, 20);
+chart.setSmooth(true);
 
-$content = $echarts->render();
-echo $content;
+option.addSeries(chart);
+
+echarts.option(option);
+
+String content = echarts.render();
+System.out.println(content);
 ```
 
 
 
 ## 安装
-### 使用 Composer 安装 (强烈推荐):
-支持 `psr-4` 规范, 开箱即用
+### Maven项目 安装:
+
 ```
-composer require youyiio/php-echarts
+<dependency>
+    <groupId>com.beyongx</groupId>
+    <artifactId>java-echarts</artifactId>
+    <version>0.1.0</version>
+</dependency>
 ```
 
-### github下载 或 直接手动下载源码:
-需手动引入自动载入文件
+### gradle项目 安装:
 
-#### 下载文件:
-git clone https://github.com/youyiio/php-echarts php-echarts
-
-
-#### 引入自动载入文件:
-使用时引入或者全局自动引入
-
-`require_once '/path/to/php-echarts/src/autoload.php`;
+```
+implementation 'com.beyongx:java-echarts:0.1.0'
+```
 
 
 
 ## 示例 - Line
 ```
-$echarts = ECharts::init("#myChart");
+ECharts echarts = ECharts.init("#myChart");
 
-$option = new Option();
-$option->title(['text' => 'ECharts 入门示例']);
-$option->xAxis(["data" => ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']]);
-$option->yAxis([]);
+Option option = new Option();
+Title title = new Title();
+title.setText("ECharts 5.0 入门示例");
+title.setLeft("center");
+option.title(title);
 
-$chart = new Line();
-$chart["data"] = [5, 20, 36, 10, 10, 20];
-$option->series([$chart]);
+XAxis xAxis = new XAxis();
+xAxis.setData(new String[]{"衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"}); //["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
+option.xAxis(xAxis);
+option.yAxis(new YAxis());
 
-$echarts->option($option);
+Line chart = new Line();
+chart.data(5, 20, 36, 10, 10, 20);
+chart.setSmooth(true);
 
-$content = $echarts->render();
-echo $content;
+option.addSeries(chart);
+
+echarts.option(option);
+
+String content = echarts.render();
+System.out.println(content);
 ```
 
 ## 示例 - Bar
 ```
-$echarts = ECharts::init("#myChart");
+ECharts echarts = ECharts.init("#myChart");
 
-$option = new Option();
-$option->title(['text' => 'ECharts 入门示例']);
-$option->xAxis(["data" => ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']]);
-$option->yAxis([]);
-$option->legend(["data" => ['销量']]); //显示指定的series的标记，对应chart->name
+Option option = new Option();
+Title title = new Title();
+title.setText("ECharts 5.0 入门示例");
+title.setLeft("center");
+option.title(title);
 
-$chart = new Bar();
-$chart->name = '销量';
-$chart->data = [5, 20, 36, 10, 10, 20];
-$option->addSeries($chart);
+XAxis xAxis = new XAxis();
+xAxis.setData(new String[]{"衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"}); //["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
+option.xAxis(xAxis);
+option.yAxis(new YAxis());
 
-$echarts->option($option);
+Bar chart = new Bar();
+chart.data(5, 20, 36, 10, 10, 20);
 
-$content = $echarts->render();
-echo $content;
+option.addSeries(chart);
+
+echarts.option(option);
+
+String content = echarts.render();
+System.out.println(content);
 ```
 
 

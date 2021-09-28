@@ -9,8 +9,29 @@
   <version>0.1.0</version>
 
   <name>java-echarts</name>
-  <!-- FIXME change it to the project's website -->
-  <url>https://www.beyongx.com</url>
+  <description>支持Apache EChart5.0+图表的Java开发库</description>
+  <url>https://github.com/youyiio/java-echarts</url>
+
+
+  <licenses>
+    <license>
+        <name>The Apache Software License, Version 2.0</name>
+        <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+        <name>youyiio</name>
+        <email>developer@jifenbang.net</email>
+    </developer>
+  </developers>
+
+  <scm>
+    <url>https://github.com/youyiio/java-echarts</url>
+    <connection>scm:git:https://github.com/youyiio/java-echarts.git</connection>
+    <developerConnection>scm:git:https://github.com/youyiio/java-echarts.git</developerConnection>
+  </scm>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -48,12 +69,17 @@
       <artifactId>commons-io</artifactId>
       <version>2.11.0</version>
     </dependency>
-
     <dependency>
 			<groupId>com.google.code.gson</groupId>
 			<artifactId>gson</artifactId>
       <version>2.8.5</version>
 		</dependency>
+    <!-- java版puppeteer -->
+    <dependency>
+      <groupId>io.github.fanyong920</groupId>
+      <artifactId>jvppeteer</artifactId>
+      <version>1.1.3</version>
+    </dependency>
   </dependencies>
 
   
@@ -67,6 +93,23 @@
       </testResource>
     </testResources>
 
+    <!-- 实际运行的plugins -->
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-gpg-plugin</artifactId>
+      </plugin>
+    </plugins>
+
+    <!-- 声明plugins -->
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
@@ -83,6 +126,52 @@
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.8.0</version>
         </plugin>
+        <!-- Source -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-source-plugin</artifactId>
+          <version>2.4</version>
+          <executions>
+              <execution>
+                  <phase>package</phase>
+                  <goals>
+                      <goal>jar-no-fork</goal>
+                  </goals>
+              </execution>
+          </executions>
+        </plugin>
+        <!-- Javadoc -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <version>2.10.2</version>
+          <executions>
+            <execution>
+              <id>attach-javadocs</id>
+              <goals>
+                <goal>jar</goal>
+              </goals>
+              <configuration>
+                <additionalparam>-Xdoclint:none</additionalparam>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+        <!-- signature -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-gpg-plugin</artifactId>
+          <version>3.0.1</version>
+          <executions>
+            <execution>
+              <id>sign-artifacts</id>
+              <phase>verify</phase>
+              <goals>
+                  <goal>sign</goal>
+              </goals>
+            </execution>
+          </executions>
+      </plugin>
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
           <version>2.22.1</version>
@@ -116,4 +205,18 @@
       </plugins>
     </pluginManagement>
   </build>
+
+  <distributionManagement>
+    <snapshotRepository>
+        <!--和settings中的一致-->
+        <id>ossrh</id>
+        <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+    <repository>
+        <!--和settings中的一致-->
+        <id>ossrh</id>
+        <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+  </distributionManagement>
+
 </project>
